@@ -23,6 +23,7 @@ attr_accessor :sender, :receiver, :status, :amount
     "Transaction rejected. Please check your account balance."
     binding.pry
   end
+end
 
   def execute_transaction
   #  if bad_transfer
