@@ -16,9 +16,9 @@ attr_accessor :sender, :receiver, :status, :amount
   end
 
   def bad_transfer
-    #BankAccount.all.find {|account| account.name != sender}.valid?
+    BankAccount.all.find {|account| account.name == sender}.valid? == false
     #sender.valid? == false
-    if sender.valid? == false
+    #if sender.valid? == false
     self.status = "rejected"
 
 end
