@@ -18,10 +18,10 @@ attr_accessor :sender, :receiver, :status, :amount
   def bad_transfer
     #BankAccount.all.find {|account| account.name != sender}.valid?
     #sender.valid? == false
-    
+
     self.status = "rejected"
     "Transaction rejected. Please check your account balance."
-    binding.pry
+    
 
 end
 
