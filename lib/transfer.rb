@@ -12,7 +12,6 @@ attr_accessor :sender, :receiver, :status, :amount
   end
 
   def valid?
-    BankAccount.all.find {|account| account.name == sender}.valid?
     sender.valid? && receiver.valid?
   end
 
