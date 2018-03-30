@@ -27,10 +27,10 @@ end
   if self.sender.valid? == false
     self.bad_transfer
   "Transaction rejected. Please check your account balance."
-elsif valid? && self.status == "pending"
-      sender.balance -= amount
-      receiver.balance += amount
-      self.status = "complete"
+#elsif valid? && self.status == "pending"
+#      sender.balance -= amount
+#      receiver.balance += amount
+#      self.status = "complete"
 
     #elsif bad_transfer
 #{}"Transaction rejected. Please check your account balance."
