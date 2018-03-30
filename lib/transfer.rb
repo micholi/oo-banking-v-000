@@ -25,7 +25,7 @@ end
 
   def execute_transaction
   if self.sender.valid? == false
-    bad_transfer
+    self.bad_transfer
   "Transaction rejected. Please check your account balance."
 elsif valid? && self.status == "pending"
       sender.balance -= amount
