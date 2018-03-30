@@ -34,7 +34,7 @@ attr_accessor :sender, :receiver, :status, :amount
     if self.status == "complete"
       sender.balance += amount
       receiver.balance -= amount
-      
+    end
   end
 
 end
