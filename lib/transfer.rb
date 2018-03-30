@@ -25,7 +25,8 @@ attr_accessor :sender, :receiver, :status, :amount
       receiver.balance += amount
       self.status = "complete"
     else
-"Transaction rejected. Please check your account balance."
+      bad_transfer
+      "Transaction rejected. Please check your account balance."
     end
 end
 
