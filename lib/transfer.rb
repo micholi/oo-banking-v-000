@@ -17,6 +17,7 @@ attr_accessor :sender, :receiver, :status, :amount
 
   def bad_transfer
     self.status = "rejected"
+    "Transaction rejected. Please check your account balance."
   end
 
   def execute_transaction
@@ -26,7 +27,7 @@ attr_accessor :sender, :receiver, :status, :amount
       self.status = "complete"
     else
       bad_transfer
-      "Transaction rejected. Please check your account balance."
+    #  "Transaction rejected. Please check your account balance."
     end
 end
 
