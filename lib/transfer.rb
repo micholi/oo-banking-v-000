@@ -28,6 +28,13 @@ attr_accessor :sender, :receiver, :status, :amount
     else
       bad_transfer
     end
-end
+  end
+
+  def reverse_transaction
+    if self.status == "complete"
+      sender.balance += amount
+      receiver.balance -= amount
+      
+  end
 
 end
