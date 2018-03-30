@@ -17,7 +17,7 @@ attr_accessor :sender, :receiver, :status, :amount
 
   def bad_transfer
 
-    if sender.valid? == false
+    if self.sender.valid? == false
     #if sender.valid? == false
     self.status = "rejected"
 end
