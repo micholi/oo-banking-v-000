@@ -16,25 +16,16 @@ attr_accessor :sender, :receiver, :status, :amount
   end
 
   def bad_transfer
-
-    if self.sender.valid? == false
-    #if sender.valid? == false
     self.status = "rejected"
-end
-end
+  end
 
   def execute_transaction
-  if self.sender.valid? == false
-    #self.bad_transfer
+    if valid? && amount < sender.balance
+      sender.balance -= amount
+      receiver.balance += amount
+      self.status = "complete"
+    else
 "Transaction rejected. Please check your account balance."
-
-#elsif valid? && self.status == "pending"
-#      sender.balance -= amount
-#      receiver.balance += amount
-#      self.status = "complete"
-
-    #elsif bad_transfer
-#{}"Transaction rejected. Please check your account balance."
     end
 end
 
